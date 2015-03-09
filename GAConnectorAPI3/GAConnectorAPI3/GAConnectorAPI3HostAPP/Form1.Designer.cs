@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
+            this.ntfIconMinim = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
             // 
             // btnStart
@@ -62,6 +64,10 @@
             this.lblMessage.Size = new System.Drawing.Size(0, 24);
             this.lblMessage.TabIndex = 2;
             // 
+            // ntfIconMinim
+            // 
+            this.ntfIconMinim.Visible = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -83,6 +89,7 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.NotifyIcon ntfIconMinim;
     }
 }
 

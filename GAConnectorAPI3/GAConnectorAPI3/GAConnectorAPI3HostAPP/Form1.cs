@@ -22,6 +22,7 @@ namespace GAConnectorAPI3HostAPP
         public Form1()
         {
             InitializeComponent();
+            this.Resize += new System.EventHandler(this.frmMain_Resize);
             host = new WebServiceHost(typeof(GAConnectorAPI3.GAApi3Service));
 
             host.Open();
@@ -52,6 +53,23 @@ namespace GAConnectorAPI3HostAPP
             host.Close();
             btnStart.Enabled = true;
             btnStop.Enabled = false;
+        }
+
+        private void frmMain_Resize(object sender, EventArgs e)
+        {
+            ntfIconMinim.BalloonTipTitle = "Host GAApi3Connector";
+            ntfIconMinim.BalloonTipText = "Para abrir la aplicación realizar dobleclick sobre el icono";
+            ntfIconMinim.BalloonTipIcon = ToolTipIcon.Info;
+            if (FormWindowState.Minimized == this.WindowState)
+            {
+                ntfIconMinim.Visible = true;
+                ntfIconMinim.ShowBalloonTip(2000);
+                this.Hide();
+            }
+            else if (FormWindowState.Normal == this.WindowState)
+            {
+                ntfIconMinim.Visible = false;
+            }
         }
 
 
