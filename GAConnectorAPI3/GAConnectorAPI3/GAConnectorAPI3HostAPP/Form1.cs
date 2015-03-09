@@ -14,16 +14,15 @@ namespace GAConnectorAPI3HostAPP
 {
     public partial class Form1 : Form
     {
-        private ServiceHost host;
+        private WebServiceHost host;
 
-        private WebServiceHost hostX;
+        //http://localhost:8080/GAApi3Service/ExtractData?Profile=90392707&Dimensions=ga:date&Metrics=ga:sessions&StartDate=2015-01-01&EndDate=2015-01-01&extraCols=1&extraData=1
+        //http://localhost:8080/GAApi3Service/ExtractDataRaw?Profile=90392707&Dimensions=ga:date&Metrics=ga:sessions&StartDate=2015-01-01&EndDate=2015-01-01&extraCols=1&extraData=1
 
         public Form1()
         {
             InitializeComponent();
-            //hostX = new WebServiceHost(typeof(GAConnectorAPI3.GAApi3Service), new Uri("http://localhost:8090/"));
-            //ServiceEndpoint ep = host.AddServiceEndpoint(typeof(GAConnectorAPI3.IGAApi3Service), new WebHttpBinding(), "");
-            host = new ServiceHost(typeof(GAConnectorAPI3.GAApi3Service));
+            host = new WebServiceHost(typeof(GAConnectorAPI3.GAApi3Service));
 
             host.Open();
             btnStart.Enabled = false;
@@ -33,9 +32,7 @@ namespace GAConnectorAPI3HostAPP
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            host = new ServiceHost(typeof(GAConnectorAPI3.GAApi3Service));
-            //hostX = new WebServiceHost(typeof(GAConnectorAPI3.GAApi3Service), new Uri("http://localhost:8090/"));
-            //ServiceEndpoint ep = host.AddServiceEndpoint(typeof(GAConnectorAPI3.IGAApi3Service), new WebHttpBinding(), "");
+            host = new WebServiceHost(typeof(GAConnectorAPI3.GAApi3Service));
             host.Open();
             btnStart.Enabled = false;
             btnStop.Enabled = true;
