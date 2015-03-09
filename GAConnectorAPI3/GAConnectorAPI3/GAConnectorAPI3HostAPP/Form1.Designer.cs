@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnStart = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
@@ -66,7 +67,9 @@
             // 
             // ntfIconMinim
             // 
+            this.ntfIconMinim.Icon = ((System.Drawing.Icon)(resources.GetObject("ntfIconMinim.Icon")));
             this.ntfIconMinim.Visible = true;
+            this.ntfIconMinim.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ntfIconMinim_Click);
             // 
             // Form1
             // 

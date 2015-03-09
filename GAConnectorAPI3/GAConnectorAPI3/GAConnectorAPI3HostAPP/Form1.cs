@@ -18,6 +18,7 @@ namespace GAConnectorAPI3HostAPP
 
         //http://localhost:8080/GAApi3Service/ExtractData?Profile=90392707&Dimensions=ga:date&Metrics=ga:sessions&StartDate=2015-01-01&EndDate=2015-01-01&extraCols=1&extraData=1
         //http://localhost:8080/GAApi3Service/ExtractDataRaw?Profile=90392707&Dimensions=ga:date&Metrics=ga:sessions&StartDate=2015-01-01&EndDate=2015-01-01&extraCols=1&extraData=1
+        //ga:pagePath
 
         public Form1()
         {
@@ -70,6 +71,12 @@ namespace GAConnectorAPI3HostAPP
             {
                 ntfIconMinim.Visible = false;
             }
+        }
+
+        private void ntfIconMinim_Click(object sender, MouseEventArgs e)
+        {
+            this.Show();
+            ntfIconMinim.Visible = false;
         }
 
 
