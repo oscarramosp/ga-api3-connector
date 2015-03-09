@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.ServiceModel.Description;
 using System.Text;
+using System.IO;
 
 namespace GAConnectorAPI3
 {
@@ -16,5 +17,9 @@ namespace GAConnectorAPI3
         [OperationContract]
         [WebGet]
         string ExtractData(string Profile, string Dimensions, string Metrics, string StartDate, string EndDate, string extraCols, string extraData);
+
+        [OperationContract]
+        [WebGet]
+        System.IO.Stream ExtractDataRaw(string Profile, string Dimensions, string Metrics, string StartDate, string EndDate, string extraCols, string extraData);
     }
 }

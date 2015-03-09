@@ -24,6 +24,8 @@ namespace GAConnectorAPI3
             if (!Profile.Contains("ga:"))
                 Profile = string.Format("ga:{0}", Profile);
 
+            ServiceLogin();
+
             GaData response = null;
             do
             {
