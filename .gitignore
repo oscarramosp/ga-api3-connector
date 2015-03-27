@@ -1,0 +1,21 @@
+# git ignore file
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3/bin*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3/bin/*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3/bin/Debug/*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3/bin/Release/*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3/obj*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3/obj/*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3/obj/Debug/*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3/obj/Debug/TempPE/*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3/obj/Release/*
+
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3HostAPP/bin*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3HostAPP/bin/*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3HostAPP/bin/Debug/*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3HostAPP/bin/Release/*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3HostAPP/obj*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3HostAPP/obj/*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3HostAPP/obj/x86/*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3HostAPP/obj/x86/Debug/*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3HostAPP/obj/x86/Debug/TempPE/*
+GAConnectorAPI3/GAConnectorAPI3/GAConnectorAPI3HostAPP/obj/Release/*
