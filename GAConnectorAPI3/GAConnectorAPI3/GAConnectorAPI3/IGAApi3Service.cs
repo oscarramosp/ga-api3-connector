@@ -16,10 +16,10 @@ namespace GAConnectorAPI3
     {
         [OperationContract]
         [WebGet]
-        string ExtractData(string Profile, string Dimensions, string Metrics, string StartDate, string EndDate, string extraCols, string extraData);
+        string ExtractData(string Profile, string Dimensions, string Metrics, string StartDate, string EndDate);
 
         [OperationContract]
         [WebGet]
-        System.IO.Stream ExtractDataRaw(string Profile, string Dimensions, string Metrics, string StartDate, string EndDate, string extraCols, string extraData);
+        System.IO.Stream ExtractDataRaw(string Profile, string Dimensions, string Metrics, string StartDate, string EndDate);
     }
 }

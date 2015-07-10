@@ -16,7 +16,7 @@ namespace GAConnectorAPI3
     {
         AnalyticsService Service { get; set; }
 
-        public string GetData(string Profile, string[] Dimensions, string[] Metrics, DateTime StartDate, DateTime EndDate, string extraCols, string extraData)
+        public string GetData(string Profile, string[] Dimensions, string[] Metrics, DateTime StartDate, DateTime EndDate)
         {
             StringBuilder sb = new StringBuilder();
 

@@ -16,8 +16,12 @@ namespace GAConnectorAPI3HostAPP
     {
         private WebServiceHost host;
 
-        //http://localhost:8080/GAApi3Service/ExtractData?Profile=90392707&Dimensions=ga:date&Metrics=ga:sessions&StartDate=2015-01-01&EndDate=2015-01-01&extraCols=1&extraData=1
-        //http://localhost:8080/GAApi3Service/ExtractDataRaw?Profile=90392707&Dimensions=ga:date&Metrics=ga:sessions&StartDate=2015-01-01&EndDate=2015-01-01&extraCols=1&extraData=1
+        //TODO: Validar vigencia de licencia
+        //Validar instalación en servidor
+        //Validación de ejecución de múltiples consolas
+
+        //http://localhost:8080/GAApi3Service/ExtractData?Profile=90392707&Dimensions=ga:date&Metrics=ga:sessions&StartDate=2015-01-01&EndDate=2015-01-01
+        //http://localhost:8080/GAApi3Service/ExtractDataRaw?Profile=90392707&Dimensions=ga:date&Metrics=ga:sessions&StartDate=2015-01-01&EndDate=2015-01-01
         //ga:pagePath
 
         public Form1()
