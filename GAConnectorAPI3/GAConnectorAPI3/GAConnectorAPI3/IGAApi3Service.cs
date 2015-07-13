@@ -21,5 +21,9 @@ namespace GAConnectorAPI3
         [OperationContract]
         [WebGet]
         System.IO.Stream ExtractDataRaw(string Profile, string Dimensions, string Metrics, string StartDate, string EndDate);
+
+        [OperationContract]
+        [WebGet]
+        System.IO.Stream GetProfilesRaw();
     }
 }

@@ -111,6 +111,69 @@ namespace GAConnectorAPI3
             return sb.ToString();
         }
 
+        public string GetProfiles()
+        {
+            StringBuilder sb = new StringBuilder();
+            ServiceLogin();
+            string delimiter = "|";
+            ManagementResource.AccountSummariesResource.ListRequest list = Service.Management.AccountSummaries.List();
+            list.MaxResults = 1000;
+
+            AccountSummaries feed = list.Execute();
+            List<AccountSummary> allRows = new List<AccountSummary>();
+
+            while (feed.Items != null)
+            {
+                allRows.AddRange(feed.Items);
+                // We will know we are on the last page when the next page token is
+                // null.
+                // If this is the case, break.
+                if (feed.NextLink == null)
+                {
+                    break;
+                }
+                // Prepare the next page of results             
+                list.StartIndex = feed.StartIndex + list.MaxResults;
+                // Execute and process the next page request
+                feed = list.Execute();
+
+            }
+            feed.Items = allRows;
+
+            var cabecera = "AccountId" + delimiter
+                            + "AccountName" + delimiter
+                            + "WebPropertyId" + delimiter
+                            + "WebProperty" + delimiter
+                            + "ProfileId" + delimiter
+                            + "Profile";
+            sb.AppendLine(cabecera);
+
+            //Get account summary and display them.
+            foreach (AccountSummary account in feed.Items)
+            {
+                // Account
+                foreach (WebPropertySummary wp in account.WebProperties)
+                {
+                    // Web Properties within that account
+                    //Don't forget to check its not null. Believe it or not it could be.
+                    if (wp.Profiles != null)
+                    {
+                        foreach (ProfileSummary profile in wp.Profiles)
+                        {
+                            // Profiles with in that web property.
+                            sb.AppendLine(account.Id + delimiter +
+                                            account.Name + delimiter +
+                                            wp.Id + delimiter +
+                                            wp.Name+ delimiter +
+                                            profile.Id + delimiter +
+                                            profile.Name);
+                        }
+                    }
+                }
+            }
+            return sb.ToString();
+        }
+
 
     }
 }
